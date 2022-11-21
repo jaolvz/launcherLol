@@ -1,0 +1,645 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    display: flex;
+background-color: darkgrey;
+}
+ .launcher {
+   overflow: hidden;
+    width: 1280px;
+    height: 720px;  
+    position: absolute;
+    background-color:rgb(3, 3, 22);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 3px solid goldenrod;
+    border-right: 3px solid rgb(3, 3, 22)   ;
+    border-bottom: 5px solid rgb(3, 3, 22)   ;
+    display: flex;
+ }
+
+ #imgFundo{
+    position: absolute;
+
+    width: 100%;
+    height: 108%;
+   filter: blur(5px);
+   filter: brightness(30%)
+ }
+
+ .conteudo{
+width: 80%;
+height: 100%;
+   z-index: 2;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .chat{
+    position: relative;
+    z-index: 2;
+background-color:rgb(3, 3, 22) ;
+height: 100%;
+width: 20%;
+
+ }
+
+
+
+ .partedecima{
+    
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid goldenrod;
+    height: 11%;
+ }
+
+ .partedebaixo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+ }
+
+ 
+
+
+/*--------------------- parte de cima ------------------------*/
+
+.menus
+{
+    display: flex;
+    align-items:center ;
+
+}
+
+ /* fazendo botão  de jogar */
+.jogar{
+    margin-left: 40px;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    border-top: 1px solid goldenrod;
+border-right: 1px solid goldenrod;
+border-bottom: 1px solid goldenrod;
+}
+
+.jogar img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    left: -15%;;
+}
+.jogar button{
+    position: absolute;
+    padding: 10px;
+width: 100%;
+height: 100%;
+background-color:rgb(44, 44, 44);
+border-top: 2px solid rgb(0, 255, 221);
+border-right: 2px solid rgb(0, 255, 221);
+border-bottom: 2px solid rgb(0, 255, 221);
+color: goldenrod;
+font-weight: 700;
+cursor: pointer;
+}
+.jogar button:hover{
+    box-shadow: 0 0 10px rgb(0, 255, 221);
+}
+
+
+/*----------------------- bolinha de exclamação---------------------*/
+.bordaAtencao{
+border:3px solid rgb(1, 145, 189);;;
+width: 30px;
+height: 30px; 
+border-radius: 50%;
+cursor: pointer;
+margin-left: 10px;
+}
+.bordaAtencao button 
+{ width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(0, 121, 158);;
+    font-weight: bold;
+   color:white;
+   font-size: 1em;
+   border: 3px solid black;
+   cursor: pointer;
+
+}
+
+.bordaAtencao button:hover{
+   box-shadow: 0 0 10px inset;
+}
+/*-----------------------  fim bolinha de exclamação---------------------*/
+
+
+
+/*----------------------- telas (inicio, tft e clash)---------------------*/
+
+.telas{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    height: 100%;
+}
+.tela
+{display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;   
+}
+.tela h1{
+font-size: .9em;
+color: rgb(190, 172, 127);
+
+}
+.tela:hover
+{ 
+    box-shadow: 0px -10px 10px -4px rgb(240, 222, 176) inset;
+}
+
+.tela:hover h1{
+    color: rgb(240, 222, 176);
+}
+
+
+
+.notificacao{
+position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    top:25%;
+    left: 75%;
+    animation: piscarnotificacao 2s 1s normal infinite;
+
+}
+
+@keyframes piscarnotificacao{
+    0%{
+        background-color: goldenrod;
+    }
+    50%{
+        background-color: rgb(248, 219, 144);
+        box-shadow: 0 0 10px rgb(248, 219, 144); ;
+
+    }
+    100%
+        {
+            background-color: goldenrod;
+        }
+}
+
+/*-----------------------  fim das telas (inicio, tft e clash)---------------------*/
+/*-----------------------  INICIO das telas (espolio e etc)---------------------*/
+
+.tela i {
+    font-size: 1.2em;
+    color: rgb(190, 172, 127);
+}
+.tela:hover i{
+    color: rgb(240, 222, 176);
+}
+
+.moedas{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.moeda  {
+    display: flex;
+    align-items: center;
+}
+
+.moeda h2{
+    margin-left: 10px;
+    margin-right: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color:  rgb(238, 234, 223);
+}
+
+.divisao{
+    display: flex;
+    margin: 0 10px;;
+    justify-content: center;
+    align-items: center;
+        color: rgb(241, 215, 142);
+        font-weight: 100;
+        font-size: 1.5em;
+    }
+ 
+    /*-----------------------  fim das telas (espolio e etc)---------------------*/
+
+/*-------------------PARTE DE BAIXO---------------------------*/
+
+
+
+
+
+/*-----------------------  avisos ---------------------*/
+
+    .avisos{
+        display: flex;
+        margin-top: 10px;
+        
+    } 
+
+    .avisos h2{
+        display: flex;
+        margin-left: 30px;
+        color: white;
+        font-size: 0.7em;
+        font-weight: 700;
+        color: rgb(190, 172, 127);;
+        border-bottom: 1px solid wheat;
+        cursor: pointer;
+    }
+
+    .avisos h2:hover{
+        color: rgb(240, 222, 176);
+    }
+
+    /*-----------------------  fim dos avisos ---------------------*/
+
+
+    /*-----------------------  btn rotacao gratis ---------------------*/
+
+    .btnRotacaoGratis{
+position: absolute;
+right: calc(0% + 30px) ;
+top:4%;
+        width: 225px;
+    height: 35px;  
+    }
+
+    .btnRotacaoGratis button{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(44, 44, 44);
+        width:100%;
+        color: rgb(190, 172, 127);;
+        height: 100%;
+        border: 1px solid goldenrod;
+    }  /*-----------------------  fim btn rotacao gratis ---------------------*/
+
+      /*-----------------------  video grande e texto ---------------------*/
+      .destaque{
+        position: absolute;
+        top: 14%;
+        width: 100% ;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+
+      }
+      .textos
+      {
+        margin-left: 30px;
+        width: 30%;
+        text-align: left;
+      }
+      
+.textos h3{
+   font-size: 0.9em; 
+   margin-top: 15px;
+   color: rgb(245, 237, 216);
+   font-weight: 100px;  
+}
+
+    .textos h1{
+        letter-spacing: 1px;
+        color: rgb(245, 237, 216);
+      }
+
+      .destaque iframe{
+        border: 2px solid rgb(3, 3, 22) ;
+        margin-right: 30px;
+      }
+   /*-----------------------  videos debaixo ---------------------*/
+
+   .videosDebaixo
+   {
+    position: absolute;
+    top: 66%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+   }
+   .videoMaior{
+    width: 23%;
+    margin-right: 11px;
+   }
+   .videoMaior h1{
+    letter-spacing: 1px;
+    font-size: 0.8em;;
+    color:rgb(240, 222, 176) ;
+   }
+
+   .videoMaior img {
+height: 20%;
+width: 100%;
+border:1px solid rgb(3, 3, 22);
+
+   }
+
+   .videoMenor{
+    width: 10.4%;
+    margin-right: 11px;
+   }
+   .videoMenor h1{
+    letter-spacing: 1px;
+    font-size: 0.8em;;
+    color:rgb(240, 222, 176) ;
+   }
+
+   .videoMenor img {
+height: 20%;
+width: 100%;
+border:1px solid rgb(3, 3, 22);
+
+   }
+
+
+
+
+
+      /*-----------------------CHAT ---------------------*/
+
+
+      
+      /*-----------------------sair, config,minimize,help---------------------*/
+      .cmdsCanto{
+        position: absolute;
+        display: flex;
+        top:0;
+        right: 0;
+
+          }
+          .cmdsCanto i {
+            font-size: 1em;
+            margin: 6px 10px;
+            color: rgb(190, 172, 127);
+            cursor: pointer;
+        }
+        .cmdsCanto i:hover{
+            color: rgb(240, 222, 176);
+
+        }
+     /*-----------------------FIM  sair, config,minimize,help---------------------*/
+
+
+
+.pCimaChat
+{
+    position: relative;
+    height: calc(10% - 1px);
+    border-bottom: 1px solid goldenrod;
+    display: flex;
+    align-items: center;
+
+}
+
+
+         /*-----------------------------FOTO E NÍVEL---------------------*/
+         .iconeUser
+{ position: relative;
+width:30%;
+height: 100%;
+margin-left: 30px;
+}
+.nivel{
+    position: absolute;
+  left: 10px;
+  top: 70%;
+  
+z-index: 3;
+background-color: rgb(44, 44, 44);;
+width: 50%;
+text-align: center;
+font-size:0.5em;
+color: wheat;
+border-radius: 39%;
+border: 1px solid goldenrod;
+
+}
+
+.foto
+{position: absolute;
+top:10px;
+left: 30px;
+transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    overflow: hidden;
+}
+
+.imgUser{
+    position: absolute;
+      width: 87.5%;
+    height: 87.5%;
+    border-radius:50% ; 
+    background-color: transparent;
+    border: 4px solid goldenrod;
+    z-index: 2;
+
+}
+.imgUser img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:80%;
+     width:80%;
+    border-radius:50% ; 
+    border: 1px solid gold;
+}
+.porcentagem
+{
+position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:50% ; 
+    
+}
+.p1
+{
+    background-color: rgb(7, 150, 150);
+    width: 50%;
+    height: 100%
+}
+
+/*-----------------------------NOME ---------------------*/
+
+.nomeStatus
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 30px;
+}
+.nomeStatus h1{
+    margin-top: 30px;
+    color: wheat;
+    font-size: 1.3em;
+
+}
+
+.nomeStatus h2{
+    color:greenyellow;
+    font-size: 0.7em;
+    margin-left: 5px;
+
+}
+.Status{
+    display: flex;
+}
+.bolinhaStatus{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: greenyellow;
+}
+#notifi{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: grey;
+    cursor: pointer;
+}
+#notifi:hover{
+    color:  rgb(240, 222, 176);
+}
+
+
+/*----------------------------- SOCIAL---------------------*/
+.social
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.social h1{
+    color: gray;
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+.social i {
+    color: rgb(190, 172, 127);;
+    margin: 0 5px ;
+    cursor: pointer;
+}
+.social i:hover{
+    color: rgb(240, 222, 176);
+}
+
+
+/*----------------------------- GERAL---------------------*/
+
+.geral
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.geral h1{
+    color: gray;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.geral i
+{
+   color: gray;
+}
+
+
+/*----------------------------- contatos---------------------*/
+.contatos
+{margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+   
+}
+.contatos::-webkit-scrollbar {
+    width: 5px;    
+               /* width of the entire scrollbar */
+  }
+ .contatos::-webkit-scrollbar-thumb {
+       /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    background-color: gray;  /* creates padding around scroll thumb */
+  }
+
+  .contatos::-webkit-scrollbar-thumb:hover{
+    background-color: gold;
+  }
+
+.contatos:hover::-webkit-scrollbar-thumb
+{
+    background-color: wheat
+}
+.amigo
+{
+width: 100%;
+height: 50px;
+padding: 5px;
+display: flex;
+align-items: center;
+}
+.fotoAmigo
+{
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid goldenrod;
+}
+
+.fotoAmigo img {
+width: 100%;
+height: 100%;
+}
+.nomeAmigo{
+    margin-left: 10px;
+}
+.nomeAmigo h1{
+    font-size: 1em;
+    color: gray;
+}
+.nomeAmigo h2{
+    font-size: .8em;
+    color: gray;
+}
