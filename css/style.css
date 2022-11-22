@@ -606,7 +606,6 @@ position: absolute;
   .contatos::-webkit-scrollbar-thumb:hover{
     background-color: gold;
   }
-
 .contatos:hover::-webkit-scrollbar-thumb
 {
     background-color: wheat
